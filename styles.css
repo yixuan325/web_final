@@ -1,0 +1,104 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Angkor", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.background {
+    background-image: url('imgs/movie.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.back {
+    background-color: #b290e3;
+    border-radius: 15px;
+    width: 700px;
+    height: 250px;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    margin: -125px 0 0 -350px; /* 調整 top margin 以使其居中 */
+    z-index:1;
+}
+
+.word {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.word h1 {
+    margin-bottom: 5px; /* 調整 spinner 與文字的間距 */
+}
+
+a {
+    color: #6608a9;
+    text-decoration: none;
+    font-family: "Angkor", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.social-icons a {
+    margin-right: 10px; /* 調整圖標之間的間距 */
+}
+
+.social-icons img {
+    width: 20px; /* 調整圖標的寬度 */
+    height: auto; /* 讓高度自動調整以保持圖標的比例 */
+}
+
+/* 按鈕的樣式 */
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s;
+}
+
+.social-button:hover {
+    background-color: #e0e0e0;
+}
+
+/* 旋轉動畫樣式 */
+.spinner {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #8534db; /* Purple */
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+    margin: 20px 0; /* 增加 spinner 與上下元素的間距 */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
